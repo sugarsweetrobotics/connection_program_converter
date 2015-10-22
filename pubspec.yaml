@@ -1,0 +1,13 @@
+name: connection_program_converter
+version: 0.0.1
+description: Program Model
+author: Yuki Suga <ysuga@ysuga.net>
+homepage: http://ysuga.net
+documentation: http://docs.newtify.com
+dependencies :
+  connection_model : 
+    path : ../connection_model
+  program_model : 
+    path : ../program_model
+
+dev_dependencies : {}
