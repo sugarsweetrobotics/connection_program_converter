@@ -74,7 +74,6 @@ class Converter {
     var nolist = new pm.StatementList([]);
     pm.Condition block = parseCondition(childBox(ifbox.condition));
     cm.Application.mapStatement(childStatement(ifbox.yes), (cm.Statement s) {
-      print (s);
       yeslist.add(parseStatement(s));
     });
     cm.Application.mapStatement(childStatement(ifbox.no), (cm.Statement s) {
@@ -102,6 +101,10 @@ class Converter {
 
   pm.TrueLiteral parseTrue(cm.TrueCondition tr) {
     return new pm.TrueLiteral();
+  }
+
+  pm.FalseLiteral parseFalse(cm.FalseCondition tr) {
+    return new pm.FalseLiteral();
   }
 
   pm.Condition parseCondition(cm.Box box) {
